@@ -568,22 +568,32 @@ select {
 
 .indication {
   background: linear-gradient(135deg, var(--blue-950), var(--blue-800));
-  color: #fff;
+  padding: 48px 0;
 }
 .indication-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  padding: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
 }
+.indication .section-kicker {
+  color: var(--yellow);
+}
 .indication h2 {
-  font-size: 38px;
-  margin: 10px 0;
-  color: #fff;
+  color: var(--blue-950);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.12;
+  margin: 10px 0 8px;
 }
 .indication p {
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 18px;
+  color: var(--muted);
+  font-size: 17px;
+  margin: 0;
 }
 
 .demo-section {
@@ -953,6 +963,13 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
   }
+  .indication {
+    padding: 40px 0;
+  }
+  .indication-box {
+    padding: 28px;
+    gap: 20px;
+  }
 }
 @media (max-width: 640px) {
   .container {
@@ -986,6 +1003,12 @@ textarea {
   }
   .hero-grid {
     padding: 56px 0 64px;
+  }
+  .indication {
+    padding: 32px 0;
+  }
+  .indication-box {
+    padding: 24px;
   }
   .section {
     padding: 64px 0;
