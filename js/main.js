@@ -6,7 +6,7 @@
   const toast = document.querySelector('.toast');
   const form = document.querySelector('#leadForm');
 
-  const menuSections = ['#inicio', '#sobre', '#recursos', '#indicacao', '#contato'];
+  const menuSections = ['#inicio', '#recursos', '#indicacao', '#contato', '#sobre'];
 
   function showToast(message) {
     if (!toast) return;
