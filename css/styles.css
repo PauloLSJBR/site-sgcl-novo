@@ -598,49 +598,55 @@ select {
 
 .demo-section {
   background: var(--soft);
+  padding: 64px 0;
 }
 .demo-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 42px;
-  align-items: start;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 52px;
+  align-items: center;
+}
+.demo-copy {
+  align-self: center;
 }
 .demo-benefits {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 .demo-benefits span {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 9px 12px;
+  padding: 8px 12px;
   font-weight: 800;
+  font-size: 14px;
   color: var(--blue-950);
 }
 .contact-form {
   background: #fff;
-  border-radius: 28px;
-  padding: 30px;
+  border-radius: 24px;
+  padding: 28px;
   box-shadow: var(--shadow);
   border: 1px solid var(--line);
 }
 .contact-form h3 {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   font-size: 26px;
   color: var(--blue-950);
 }
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 12px 14px;
 }
 .form-grid label {
   font-weight: 800;
   color: var(--blue-950);
   display: grid;
-  gap: 7px;
+  gap: 5px;
+  font-size: 14px;
 }
 .form-grid .full {
   grid-column: 1/-1;
@@ -655,6 +661,14 @@ select {
   background: #fff;
   color: var(--text);
 }
+.demo-section input,
+.demo-section select {
+  padding: 11px 12px;
+}
+.demo-section textarea {
+  padding: 11px 12px;
+  min-height: 120px;
+}
 textarea {
   resize: vertical;
 }
@@ -664,12 +678,13 @@ textarea {
 }
 .full-btn {
   width: 100%;
-  margin-top: 16px;
+  margin-top: 14px;
 }
 .form-note {
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 1.45;
   color: var(--muted);
-  margin: 14px 0 0;
+  margin: 12px 0 0;
 }
 
 .contact-final {
@@ -709,6 +724,7 @@ textarea {
 .footer-brand img {
   width: 122px;
   margin-bottom: 12px;
+  border-radius: 16px;
 }
 .site-footer h3 {
   margin: 0 0 12px;
@@ -821,39 +837,57 @@ textarea {
   min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
-  padding: 64px 0;
+  padding: 56px 0;
 }
 .access-hero-card {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 32px;
+  border-radius: 28px;
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
-  padding: 44px;
+  padding: 38px 40px;
   text-align: center;
-  max-width: 760px;
+  max-width: 720px;
   color: #fff;
 }
 .access-hero-card img {
-  width: 150px;
-  margin: 0 auto 20px;
+  width: 170px;
+  margin: 0 auto 22px;
+  border-radius: 18px;
 }
 .access-hero-card h1 {
-  font-size: 44px;
-  margin: 12px 0;
+  font-size: clamp(34px, 4vw, 46px);
+  line-height: 1.1;
+  margin: 14px 0 18px;
 }
 .access-hero-card p {
   color: rgba(255, 255, 255, 0.86);
   font-size: 18px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
 }
 .access-links-page {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: 14px;
   flex-wrap: wrap;
-  margin: 26px 0;
+  margin: 26px 0 22px;
+}
+.access-links-page .btn {
+  min-width: 230px;
+  flex: 1 1 230px;
+}
+.access-help {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  line-height: 1.5;
 }
 .back-home-link {
-  margin-top: 12px;
+  margin-top: 14px;
+  opacity: 0.92;
 }
 
 @media (max-width: 1180px) {
@@ -970,6 +1004,12 @@ textarea {
     padding: 28px;
     gap: 20px;
   }
+  .demo-grid {
+    gap: 36px;
+  }
+  .demo-copy {
+    align-self: auto;
+  }
 }
 @media (max-width: 640px) {
   .container {
@@ -1009,6 +1049,37 @@ textarea {
   }
   .indication-box {
     padding: 24px;
+  }
+  .demo-section {
+    padding: 56px 0;
+  }
+  .contact-form {
+    padding: 22px;
+  }
+  .access-hero-page {
+    padding: 40px 0;
+  }
+  .access-hero-card {
+    padding: 28px 24px;
+    border-radius: 24px;
+  }
+  .access-hero-card img {
+    width: 140px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+  }
+  .access-hero-card h1 {
+    font-size: 32px;
+  }
+  .access-links-page {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 22px 0 18px;
+  }
+  .access-links-page .btn {
+    min-width: 0;
+    width: 100%;
+    flex: 1 1 auto;
   }
   .section {
     padding: 64px 0;
