@@ -90,6 +90,7 @@ select {
   height: auto;
   max-height: 72px;
   object-fit: contain;
+  border-radius: 14px;
 }
 .site-menu {
   display: flex;
